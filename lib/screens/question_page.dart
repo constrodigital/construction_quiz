@@ -200,13 +200,13 @@ class QuestionPageState extends State<QuestionPage> {
     final media = MediaQuery.of(context).size;
 
     final appbar = AppBar(
-      backgroundColor: Colors.purple[200],
+      backgroundColor: Theme.of(context).primaryColor,
       centerTitle: true,
       title: Text(level),
     );
 
     return Scaffold(
-        backgroundColor: Colors.purple[100],
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         appBar: appbar,
         body: questionIndex < providerDataForLevelsQuestions.questions.length
             ? Column(
@@ -271,39 +271,35 @@ class QuestionPageState extends State<QuestionPage> {
                         ),
                   Container(
                     height: media.height * 0.35,
-                    child: ListView(
-                      children: [
-                        Column(
-                          children: <Widget>[
-                            // ...(questions[questionIndex]['answers']
-                            //         as List<Map<String, Object>>)
-                            //     .map((answer) {
-                            //   return AnswerOption(() {
-                            //     questionIncrementer();
-                            //   }, answer['text'] as String);
-                            // }).toList(),
-                            AnswerOption(() {
-                              questionIncrementer();
-                            },
-                                providerDataForLevelsQuestions
-                                    .questions[questionIndex]['option1']),
-                            AnswerOption(() {
-                              questionIncrementer();
-                            },
-                                providerDataForLevelsQuestions
-                                    .questions[questionIndex]['option2']),
-                            AnswerOption(() {
-                              questionIncrementer();
-                            },
-                                providerDataForLevelsQuestions
-                                    .questions[questionIndex]['option3']),
-                            AnswerOption(() {
-                              questionIncrementer();
-                            },
-                                providerDataForLevelsQuestions
-                                    .questions[questionIndex]['option4']),
-                          ],
-                        ),
+                    child: Column(
+                      children: <Widget>[
+                        // ...(questions[questionIndex]['answers']
+                        //         as List<Map<String, Object>>)
+                        //     .map((answer) {
+                        //   return AnswerOption(() {
+                        //     questionIncrementer();
+                        //   }, answer['text'] as String);
+                        // }).toList(),
+                        AnswerOption(() {
+                          questionIncrementer();
+                        },
+                            providerDataForLevelsQuestions
+                                .questions[questionIndex]['option1']),
+                        AnswerOption(() {
+                          questionIncrementer();
+                        },
+                            providerDataForLevelsQuestions
+                                .questions[questionIndex]['option2']),
+                        AnswerOption(() {
+                          questionIncrementer();
+                        },
+                            providerDataForLevelsQuestions
+                                .questions[questionIndex]['option3']),
+                        AnswerOption(() {
+                          questionIncrementer();
+                        },
+                            providerDataForLevelsQuestions
+                                .questions[questionIndex]['option4']),
                       ],
                     ),
                   ),
@@ -311,7 +307,7 @@ class QuestionPageState extends State<QuestionPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: <Widget>[
                       Container(
-                        width: media.width * 0.12,
+                        width: media.width * 0.22,
                         child: ElevatedButton(
                           child: Icon(Icons.keyboard_arrow_left),
                           onPressed: previous,
@@ -323,7 +319,7 @@ class QuestionPageState extends State<QuestionPage> {
                         ),
                       ),
                       Container(
-                        width: media.width * 0.12,
+                        width: media.width * 0.22,
                         child: ElevatedButton(
                           child: Icon(Icons.keyboard_arrow_right),
                           onPressed: next,

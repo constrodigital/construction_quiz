@@ -25,7 +25,7 @@ class SubjectBox extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
               ),
               child: InkWell(
-                splashColor: Colors.purple.withAlpha(30),
+                splashColor: Theme.of(context).accentColor,
                 onTap: () {
                   Navigator.pushNamed(context, '/subject_page',
                       arguments: subjectName);

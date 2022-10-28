@@ -20,6 +20,11 @@ class MyQuizApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (BuildContext context) => QuizProvider(),
       child: MaterialApp(
+        theme: ThemeData(
+          primarySwatch: Colors.purple,
+          accentColor: Colors.purple[200],
+          scaffoldBackgroundColor: Colors.purple[100],
+        ),
         initialRoute: '/',
         routes: {
           '/': (ctx) => QuizUi(),

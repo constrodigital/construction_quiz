@@ -22,7 +22,7 @@ class Result extends StatelessWidget {
     //   ),
     // );
     return Scaffold(
-      backgroundColor: Colors.purple[100],
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: Container(
         height: media.height * 0.9,
         width: media.width * 1,
@@ -34,7 +34,7 @@ class Result extends StatelessWidget {
                     topStart: Radius.circular(30),
                     bottomEnd: Radius.circular(30)),
                 //shape: BoxShape.circle,
-                color: Colors.purple[200],
+                color: Theme.of(context).accentColor,
               ),
               margin: EdgeInsets.all(35),
               padding: EdgeInsets.all(20),
@@ -43,7 +43,7 @@ class Result extends StatelessWidget {
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
-                    color: Colors.white),
+                    color: Theme.of(context).primaryColor),
               ),
             ),
           ),

@@ -56,13 +56,13 @@ class _QuizUiState extends State<QuizUi> {
     final media = MediaQuery.of(context).size;
     //getSubjectTypes();
     final appbar = AppBar(
-      backgroundColor: Colors.purple[200],
+      backgroundColor: Theme.of(context).accentColor,
       title: Center(
         child: const Text("Construction Quiz"),
       ),
     );
     return Scaffold(
-      backgroundColor: Colors.purple[100],
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       appBar: appbar,
       body: SafeArea(
         child: Column(

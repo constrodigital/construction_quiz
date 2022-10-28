@@ -61,13 +61,13 @@ class _SubjectPageState extends State<SubjectPage> {
     // };
 
     final appbar = AppBar(
-      backgroundColor: Colors.purple[200],
+      backgroundColor: Theme.of(context).primaryColor,
       centerTitle: true,
       title: Text(quizName),
     );
 
     return Scaffold(
-      backgroundColor: Colors.purple[100],
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       appBar: appbar,
 
       // appBar: AppBar(
@@ -112,9 +112,9 @@ class _SubjectPageState extends State<SubjectPage> {
                 children: <Widget>[
                   CircularProgressIndicator(
                     value: 0.2,
-                    backgroundColor: Colors.white,
+                    backgroundColor: Theme.of(context).accentColor,
                     strokeWidth: 8,
-                    color: Colors.purple,
+                    color: Theme.of(context).primaryColor,
                   ),
                   Container(
                     //margin: EdgeInsets.all(10),

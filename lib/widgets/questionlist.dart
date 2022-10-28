@@ -13,7 +13,7 @@ class QuestionList extends StatelessWidget {
       height: media.size.height * 0.15,
       width: media.size.width * 0.8,
       decoration: BoxDecoration(
-          border: Border.all(width: 2, color: Colors.purple),
+          border: Border.all(width: 2, color: Theme.of(context).primaryColor),
           borderRadius: BorderRadius.all(Radius.circular(10))),
       child: Text(
         question,

@@ -24,7 +24,8 @@ class ChapterBox extends StatelessWidget {
           Container(
             padding: EdgeInsets.all(10),
             decoration: BoxDecoration(
-                border: Border.all(width: 2, color: Colors.purple),
+                border:
+                    Border.all(width: 2, color: Theme.of(context).primaryColor),
                 borderRadius: BorderRadius.all(Radius.circular(5))),
             child: Text(
               index.toString(),
@@ -32,7 +33,7 @@ class ChapterBox extends StatelessWidget {
             ),
           ),
           InkWell(
-            splashColor: Colors.white,
+            splashColor: Theme.of(context).accentColor,
             onTap: () =>
                 Navigator.pushNamed(context, '/questions_page', arguments: {
               'level': level,
@@ -42,7 +43,8 @@ class ChapterBox extends StatelessWidget {
               width: media.size.width * 0.7,
               padding: EdgeInsets.all(8),
               decoration: BoxDecoration(
-                  border: Border.all(width: 2, color: Colors.purple),
+                  border: Border.all(
+                      width: 2, color: Theme.of(context).primaryColor),
                   borderRadius: BorderRadius.all(Radius.circular(5))),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -50,10 +52,10 @@ class ChapterBox extends StatelessWidget {
                   Text(level),
                   LinearProgressIndicator(
                     value: 0.3,
-                    backgroundColor: Colors.white,
+                    backgroundColor: Theme.of(context).accentColor,
                     minHeight: 12,
                     //strokeWidth: 8,
-                    color: Colors.purple,
+                    color: Theme.of(context).primaryColor,
                   ),
                 ],
               ),
